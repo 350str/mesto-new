@@ -4,9 +4,9 @@
   "description": "Разрабатывался с целью практики с JavaScript, а именно с ООП и Api.",
   "main": "index.js",
   "scripts": {
-    "build": "cross-env NODE_ENV=production rimraf dist && webpack --mode production",
+    "build": "cross-env NODE_ENV=production rimraf public && webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",
-    "deploy": "NODE_ENV=production gh-pages -d dist"
+    "deploy": "NODE_ENV=production gh-pages -d public"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/350str/mesto-new/issues"
   },
-  "homepage": "https://github.com/350str/mesto-new#readme",
+  "homepage": "https://github.com/350str/mesto-new",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
@@ -29,7 +29,7 @@
     "css-loader": "^3.4.2",
     "cssnano": "^4.1.10",
     "file-loader": "^5.0.2",
-    "gh-pages": "^2.2.0",
+    "gh-pages": "~2.0.1",
     "html-webpack-plugin": "^3.2.0",
     "image-webpack-loader": "^6.0.0",
     "mini-css-extract-plugin": "^0.9.0",
