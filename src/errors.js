@@ -3,3 +3,5 @@ const errors = {
     value: 'Это обязательное поле',
     URL: 'Здесь должна быть ссылка'
 }
+
+export default errors;

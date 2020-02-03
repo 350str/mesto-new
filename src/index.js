@@ -1,3 +1,11 @@
+import './pages/index.css';
+import apiData from './apiData';
+import Card from './Card';
+import CardList from './CardList';
+import errors from './errors';
+import Popup from './Popup';
+import Validation from './Validation';
+
 (function () {
 
   const rootDirection = document.querySelector('.root');
