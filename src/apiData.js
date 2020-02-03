@@ -5,3 +5,5 @@ const apiData = {
     'Content-Type': 'application/json'
   }
 }
+
+export default apiData;

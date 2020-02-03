@@ -1,4 +1,6 @@
-class Popup {
+import Api from './Api';
+
+export default class Popup {
 
   constructor(api) {
     this.api = api;

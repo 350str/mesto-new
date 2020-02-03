@@ -1,4 +1,6 @@
-class Card {
+import Api from './Api';
+
+export default class Card {
   
   constructor(api) {
     this.api = api;

@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mesto</title>
-  <link rel="stylesheet" href="./pages/index.css">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 </head>
 <body>
   <div class="root">
     <header class="header root__section">
-      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+      <img src="../src/images/logo.svg" alt="mesto logo" class="logo">
     </header>
     <div class="profile root__section">
       <div class="user-info">
@@ -30,7 +30,7 @@
 
     <div class="popup popup_add">
       <div class="popup__content">
-        <img src="./images/close.svg" alt="" class="popup__close">
+        <img src="../src/images/close.svg" alt="" class="popup__close">
         <h3 class="popup__title">Новое место</h3>
         <form class="popup__form" name="add">
             <input type="text" name="name" minlength="2" class="popup__input popup__input_type_card-name" placeholder="Название" required>
@@ -44,7 +44,7 @@
 
     <div class="popup popup_edit">
       <div class="popup__content">
-        <img src="./images/close.svg" alt="" class="popup__close">
+        <img src="../src/images/close.svg" alt="" class="popup__close">
         <h3 class="popup__title">Редактировать профиль</h3>
         <form class="popup__form" name="edit">
             <input type="text" name="author" minlength="2" class="popup__input popup__input_type_author-name" placeholder="Имя" required>
@@ -58,14 +58,14 @@
 
     <div class="popup popup_big-pic">
       <div class="popup__images">
-        <img class="popup__close" src="./images/close.svg" alt="" >
+        <img class="popup__close" src="../src/images/close.svg" alt="" >
         <img class="popup__big-image" alt="">
       </div>
     </div>
 
     <div class="popup popup__profile_pic">
       <div class="popup__content">
-        <img src="./images/close.svg" alt="" class="popup__close">
+        <img src="../src/images/close.svg" alt="" class="popup__close">
         <h3 class="popup__title">Обновить аватар</h3>
         <form class="popup__form" name="pic">
           <input type="url" name="link" minlength="2" class="popup__input popup__input_type_link-url" placeholder="Ссылка на аватар" required>
@@ -77,6 +77,7 @@
 
   </div>
 
+  <!--
   <script src="apiData.js"></script>
   <script src="Card.js"></script>
   <script src="CardList.js"></script>
@@ -85,6 +86,8 @@
   <script src="Api.js"></script>
   <script src="errors.js"></script>
   <script src="index.js"></script>
+  -->
 
+  <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
 </html>
