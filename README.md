@@ -18,6 +18,7 @@
 ### Setup
 
 `$ npm install`
+
 `$ npm run build`
 
 **v0.1.2**
