@@ -38,6 +38,7 @@ export default class Card {
   // создаем карточку (входные данные this.name и this.link из конструктора)
   create(name, link, likes = [], user_id, id) {
     const placeCard = document.createElement("div");
+    const authorId = document.querySelector('.places-list').getAttribute('author-id');
     placeCard.classList.add("place-card");
     placeCard.insertAdjacentHTML('beforeEnd', `   
     <div class="place-card__image">
@@ -55,17 +56,17 @@ export default class Card {
     placeCard.querySelector(".place-card__image").style.backgroundImage = `url(${ link })`;
     placeCard.querySelector(".place-card__like-counter").textContent = likes.length;
     
-    new Api(this.api).getAuthorData().then(json => {
-      if (likes.some(item => item._id === json._id)) {
-        placeCard.querySelector('.place-card__like-icon').classList.add('place-card__like-icon_liked');
-      }
-      if (user_id === json._id) {
-        placeCard.querySelector('.place-card__delete-icon').style.display = "block";
-      } 
-    });
-
+    if (likes.some(item => item._id === authorId)) {
+      placeCard.querySelector('.place-card__like-icon').classList.add('place-card__like-icon_liked');
+    }
+    if (user_id === authorId) {
+      placeCard.querySelector('.place-card__delete-icon').style.display = "block";
+    }
+                                            
     placeCard.setAttribute('id', id);
+    placeCard.setAttribute('user_id', user_id);
     
     return placeCard;
   }
+  
 }
