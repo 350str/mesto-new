@@ -4,20 +4,20 @@
   "description": "Разрабатывался с целью практики с JavaScript, а именно с ООП и Api.",
   "main": "index.js",
   "scripts": {
-    "build": "cross-env NODE_ENV=production rimraf dist && webpack --mode production",
+    "build": "cross-env NODE_ENV=production rimraf public && webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",
-    "deploy": "NODE_ENV=production gh-pages -d dist"
+    "deploy": "NODE_ENV=production gh-pages -d public"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/350str/350str.github.io.git"
+    "url": "git+https://github.com/350str/mesto-new.git"
   },
   "author": "Roman Stravnyak",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/350str/350str.github.io/issues"
+    "url": "https://github.com/350str/mesto-new/issues"
   },
-  "homepage": "https://github.com/350str/350str.github.io",
+  "homepage": "https://github.com/350str/mesto-new",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
