@@ -1,4 +1,4 @@
-# [mesto](https://mesto-new.now.sh/) 
+# [mesto](https://350str.github.io/mesto-new/) 
 
 
 ## Mesto - сервис по добавлению, редактированию и оценке фотокарточек. 
