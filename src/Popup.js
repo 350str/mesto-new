@@ -16,6 +16,7 @@ export default class Popup {
         authorName.textContent = json.name;
         authorAbout.textContent = json.about;
         authorImage.style.backgroundImage = `url(${json.avatar})`;
+        document.querySelector('.places-list').setAttribute('author-id', json._id);
       });     
   }
 

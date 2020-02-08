@@ -27,6 +27,7 @@ import Validation from './Validation';
   popup.loadProfileData();
   cardList.render(apiData);
   
+  
   rootDirection.addEventListener('click', card.like);
   rootDirection.addEventListener('click', card.remove);
   rootDirection.addEventListener('click', popup.close);

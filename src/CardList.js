@@ -32,11 +32,12 @@ export default class CardList {
   }
 
   // рендер массива с карточками через метод create класса Card
-  render() {
+  render(author) {
     new Api(this.api).getCardArray()
       .then(json => json.forEach(item => 
-        this.container.append( new Card(this.api).create( item.name, item.link, item.likes, item.owner._id, item._id ) ))
-      )  
+        this.container.append( new Card(this.api).create( 
+          item.name, item.link, item.likes, item.owner._id, item._id, author 
+        ))
+      ))
   }
- 
 }

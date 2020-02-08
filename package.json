@@ -6,7 +6,7 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production rimraf public && webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",
-    "deploy": "NODE_ENV=production gh-pages -d public"
+    "deploy": "cross-env NODE_ENV=production gh-pages -d public"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/350str/mesto-new/issues"
   },
-  "homepage": "https://github.com/350str/mesto-new",
+  "homepage": "https://350str.github.io/mesto-new",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
