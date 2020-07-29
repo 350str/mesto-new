@@ -28,16 +28,17 @@ export default class CardList {
         popupCard.classList.remove('popup_is-opened')
       });   
     popupCardForm.reset();
-    this.render();
   }
 
   // рендер массива с карточками через метод create класса Card
   render(author) {
+    const loader = document.querySelector('.places-list__loader');
     new Api(this.api).getCardArray()
       .then(json => json.forEach(item => 
         this.container.append( new Card(this.api).create( 
           item.name, item.link, item.likes, item.owner._id, item._id, author 
         ))
       ))
+      .finally(() => loader.classList.add('places-list__loader_disabled'));
   }
 }

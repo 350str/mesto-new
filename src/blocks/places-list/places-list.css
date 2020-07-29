@@ -1,3 +1,6 @@
+@import url(./__loader/places-list__loader.css);
+@import url(./__loader/_disabled/places-list__loader_disabled.css);
+
 .places-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, 282px);

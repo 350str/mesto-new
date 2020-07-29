@@ -14,8 +14,3 @@
   border-radius: 10px;
   min-height: 360px;
 }
-
-.place-card:hover {
-  transform: scale(1.03, 1.03);
-  transition: linear 0.2s;
-}
