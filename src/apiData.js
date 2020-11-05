@@ -1,4 +1,4 @@
-const url = NODE_ENV === "development" ? "http://praktikum.tk/cohort6" : "https://praktikum.tk/cohort6";
+const url = NODE_ENV === "development" ? "https://nomoreparties.co/cohort6" : "https://nomoreparties.co/cohort6";
 
 const apiData = {
   baseUrl: url,
